@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const password = document.getElementById('password').value;
             
             // Mock login validation
-            if (username === 'user' && password === 'password') {
+            if (username === 'Username' && password === 'Password') {
                 alert('Login successful!');
                 // Redirect to a different page or dashboard
-                window.location.href = 'dashboard.html';
+                window.location.href = 'gamespace.html';
             } else {
                 alert('Invalid username or password!');
             }
