@@ -6,6 +6,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
     background-color: #f0f0f0;
     color: #333;
+    align-content: center;
 }
 
 .dark-mode {
@@ -168,6 +169,7 @@ a {
     align-items: center;
     padding: 60px 20px;
     background-color: #f8f9fa;
+    align-content: center;
 }
 
 .event-info {
