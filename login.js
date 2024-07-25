@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const password = document.getElementById('password').value;
             
             // Mock login validation
-            if (username === 'user' && password === 'password') {
+            if (username === 'Francis' && password === '123') {
                 alert('Login successful!');
                 // Redirect to a different page or dashboard
                 window.location.href = 'dashboard.html';
