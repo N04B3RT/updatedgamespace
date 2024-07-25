@@ -1,31 +1,414 @@
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('/IMAGES/night-sky-glows-with-iridescent-deep-space-generative-ai.jpg') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    color: rgb(255, 0, 0);
-    
- 
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-header {
-    background-color: blue;
+.dark-mode {
+    background-color: #333;
+    color: #444444;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.header {
+    background-color: #282c34;
     color: white;
-    width: 100%;
-    text-align: center;
-    padding: 1em 0;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4757;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.light-dark-toggle {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.light-dark-toggle:hover {
+    background-color: #ff6b81;
+}
+
+.buy-now {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-now:hover {
+    background-color: #3a8dde;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(to right, #1e90ff, #ff4757);
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in 0.5s;
+}
+
+.hero-image {
+    display: none;
+}
+
+.login-button {
+    background-color: white;
+    color: #1e90ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    animation: fadeIn 2s ease-in 1s;
+}
+
+.login-button a {
+    color: #1e90ff;
+}
+
+.login-button:hover {
+    background-color: #ddd;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Event Section Styles */
+.event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.event-info {
+    max-width: 600px;
+}
+
+.event-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.event-info p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.ticket-prices {
+    display: flex;
+    gap: 20px;
+}
+
+.ticket {
+    background-color: #1e90ff;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.ticket:hover {
+    transform: scale(1.05);
+}
+
+.conference-card {
+    background-color: white;
+    color: #1e90ff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.conference-card:hover {
+    transform: scale(1.05);
+}
+
+.conference-card button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.conference-card button:hover {
+    background-color: #3a8dde;
+}
+
+/* Game Gallery Styles */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+/* Container for game cards */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust minmax for responsive sizing */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Space around the grid */
+    justify-items: center; /* Center items horizontally */
+    align-items: stretch; /* Stretch items to fill vertical space */
+}
+
+/* Each game card */
+.game {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    height: 300px; /* Fixed height for all cards */
+    width: 200px; /* Fixed width for all cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.game-overlay a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #ff4757;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.game:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+}
+
+.game:hover .game-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.game-overlay a:hover {
+    background-color: #ff6b81; /* Change button color on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .game-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive column size */
+    }
+
+    .game {
+        height: 250px;
+        width: 150px;
+    }
+
+    .game-overlay a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .game {
+        height: 200px;
+        width: 120px;
+    }
+
+    .game-overlay a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+
+/* Cards Section Styles */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
 .game-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 20px;
 }
-
 .game {
     position: relative;
     margin: 10px;
@@ -36,17 +419,30 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
-
+.game-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.game {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
 .game:hover {
     transform: scale(1.1);
 }
-
 .game img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .game .game-overlay {
     position: absolute;
     top: 0;
@@ -60,45 +456,86 @@ header {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-
 .game:hover .game-overlay {
     opacity: 1;
 }
-
 .game .game-overlay a {
     color: white;
     font-size: 1.2em;
     text-decoration: none;
 }
 
-
-.animated-text {
-    font-weight: bolder;
-    font-size: 3em;
-    text-align: center;
-    margin-top: 30px;
-    opacity: 0;
-    animation: fadeIn 3s forwards;
-}
-
-.company-description {
-    text-align: justify;
-    margin: 20px auto;
-    max-width: 800px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    color: white;
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    to {
-        opacity: 1;
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+        transform: translateX(-100%);
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .event {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        width: 100%;
+    }
+
+    .game-container {
+        grid-template-columns: repeat(auto-fit, minmax(auto));
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(auto));
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
     }
 }
