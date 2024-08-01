@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (username === 'Francis' && password === '123') {
                 alert('Login successful!');
                 // Redirect to a different page or dashboard
-                window.location.href = 'dashboard.html';
+                window.location.href = 'gamespace.html';
             } else {
                 alert('Invalid username or password!');
             }
