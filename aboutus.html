@@ -5,79 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Game Space</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-        .navbar {
-            background-color: #343a40;
-        }
-        .navbar-nav .nav-link {
-            color: #ffffff;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #f8f9fa;
-        }
-        .footer {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 20px 0;
-        }
-        .about-section {
-            padding: 60px 0;
-            text-align: center;
-        }
-        .about-section h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        .about-section p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .about-section .btn {
-            background-color: #007bff;
-            color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 25px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f7afa10bc2.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">Game Space</a>
+        <a class="navbar-brand" href="gamespace.html">Game Space</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="home.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Games</a>
+                    <a class="nav-link" href="gamespace.html">Games</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="aboutus.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="login.html">login</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- About Section -->
-    <div class="about-section">
-        <div class="container">
-            <h1>About Game Space</h1>
-            <p>Welcome to Game Space, your ultimate destination for immersive gaming experiences. Our mission is to create a community where gamers of all levels can come together to explore, compete, and enjoy a vast array of games. Whether you're a casual player or a hardcore enthusiast, Game Space offers something for everyone.</p>
-            <p>Founded by a team of passionate gamers, our platform is designed to provide the latest and greatest in gaming entertainment. From action-packed adventures to mind-bending puzzles, we curate a diverse selection of games to keep you engaged and entertained.</p>
-            <p>Join us today and become part of a vibrant community where gaming is celebrated and new friendships are forged. At Game Space, the adventure never ends!</p>
-            <a href="#" class="btn btn-primary">Join Now</a>
+    <div class="container about-section">
+        <h1 class="text-center">About Game Space</h1>
+        <p class="text-center">All about our gaming kingdom</p>
+
+        <!-- Member Section -->
+        <div class="staff-section">
+            <h2>Members</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="c:\Users\ATISTORES\Documents\GitHub\ern.jpg" class="card-img-top" alt="Staff 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Ernest</h5>
+                            <p class="card-text">About Page, Game Space</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="c:\Users\ATISTORES\Desktop\Screenshot (56).png" class="card-img-top" alt="Staff 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Nobert</h5>
+                            <p class="card-text">Lead Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="c:\Users\ATISTORES\Desktop\Screenshot (55).png" class="card-img-top" alt="Staff 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Francis</h5>
+                            <p class="card-text">Login Page, Game Space</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- About Video Section -->
+        <div class="about-video-section">
+            <h2>About Game Space</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dOcAz5vHPYE?si=XagEUcPj8ROZp44X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Location Section -->
+        <div class="location-section">
+            <h2>Location</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Humber College North, 205 Humber College Blvd</p>
+                    <p>Visit our Address.</p>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23064.208360812874!2d-79.64463032089836!3d43.730785800000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3b93427888b5%3A0xd290e7c099e8af71!2sHumber%20College%20North%20Campus%3A%20Parking%20Lot%20%2313!5e0!3m2!1sen!2sca!4v1721950328830!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Instagram Section -->
+    <div class="instagram-section text-center">
+        <h2 class="fa-brands fa-instagram"></i>Instagram</h2>
+        <!-- Instagram embeds or links can go here -->
     </div>
 
     <!-- Footer -->
@@ -85,9 +108,9 @@
         <div class="container">
             <p>&copy; 2024 Game Space. All Rights Reserved.</p>
             <p>Follow us on:
-                <a href="#" class="text-white">Facebook</a> |
-                <a href="#" class="text-white">Twitter</a> |
-                <a href="#" class="text-white">Instagram</a>
+                <a href="https://www.facebook.com/" class="text-white">Facebook</a> |
+                <a href="https://x.com/i/flow/login?lang=en" class="text-white">Twitter</a> |
+                <a href="https://www.instagram.com/accounts/login/?hl=en" class="text-white">Instagram</a>
             </p>
         </div>
     </footer>
@@ -95,5 +118,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
